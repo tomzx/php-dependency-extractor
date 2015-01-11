@@ -51,7 +51,6 @@ Symfony\Component\Console\Input\InputOption
 Symfony\Component\Console\Output\OutputInterface
 ```
 
-
 ## License
 
 The code is licensed under the [MIT license](http://choosealicense.com/licenses/mit/). See license.txt.
