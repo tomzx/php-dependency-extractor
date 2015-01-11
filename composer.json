@@ -31,5 +31,10 @@
 		"psr-4": {
 			"PHPDependencyExtractor\\": "src/PHPDependencyExtractor"
 		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.1-dev"
+		}
 	}
 }
