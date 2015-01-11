@@ -1,0 +1,35 @@
+{
+	"name": "tomzx/php-dependency-extractor",
+	"description": "Scan directories to extract dependencies",
+	"type": "library",
+	"keywords": [
+		"namespace",
+		"dependency"
+	],
+	"homepage": "https://github.com/tomzx/php-dependency-extractor",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Tom Rochette",
+			"email": "tom@tomrochette.com",
+			"homepage": "http://www.tomrochette.com"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/tomzx/php-dependency-extractor/issues"
+	},
+	"require": {
+		"php": ">=5.4",
+		"symfony/console": "~2.6",
+		"nikic/php-parser": "~1.0.2",
+		"phpunit/php-file-iterator": "~1.3"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4"
+	},
+	"autoload": {
+		"psr-4": {
+			"PHPDependencyExtractor\\": "src/PHPDependencyExtractor"
+		}
+	}
+}
