@@ -29,7 +29,7 @@ See the example section for examples of how to use the tool.
 ## Example
 
 ```bash
-php bin/php-dependency-extractor extract --why
+php bin/php-dependency-extractor extract --why target-path
 
 File_Iterator_Facade
 PHPDependencyExtractor\Console\Command\ExtractCommand
