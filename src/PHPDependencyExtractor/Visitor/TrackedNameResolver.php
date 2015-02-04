@@ -15,6 +15,14 @@ class TrackedNameResolver extends NameResolver
 	 * @var \PHPDependencyExtractor\Registry\Registry
 	 */
 	protected $registry;
+	/**
+	 * @var array
+	 */
+	protected $excludedNames = [
+		'parent',
+		'self',
+		'static',
+	];
 
 	/**
 	 * @param \PHPDependencyExtractor\Registry\Registry $registry
@@ -33,7 +41,7 @@ class TrackedNameResolver extends NameResolver
 
 		if ($node instanceof UseUse) {
 			$name = $node->name->toString();
-			$this->registry->add($name);
+			$this->addToRegistry($name);
 		} elseif ($node instanceof Expr\StaticCall
 			|| $node instanceof Expr\StaticPropertyFetch
 			|| $node instanceof Expr\ClassConstFetch
@@ -42,8 +50,18 @@ class TrackedNameResolver extends NameResolver
 		) {
 			if ($node->class instanceof Name) {
 				$name = $node->class->toString();
-				$this->registry->add($name);
+				$this->addToRegistry($name);
 			}
+		}
+	}
+
+	/**
+	 * @param $name
+	 */
+	protected function addToRegistry($name)
+	{
+		if ( ! in_array(strtolower($name), $this->excludedNames)) {
+			$this->registry->add($name);
 		}
 	}
 }
