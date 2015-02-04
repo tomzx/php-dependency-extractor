@@ -4,9 +4,11 @@ namespace PHPDependencyExtractor;
 
 use PHPDependencyExtractor\Registry\Registry;
 use PHPDependencyExtractor\Visitor\TrackedNameResolver;
+use PhpParser\Error;
 use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
 use PhpParser\Parser;
+use RuntimeException;
 
 class Extractor
 {
@@ -31,7 +33,7 @@ class Extractor
 	}
 
 	/**
-	 * @param $string
+	 * @param string $code
 	 * @return array
 	 */
 	public function extractFromString($code)
@@ -43,10 +45,9 @@ class Extractor
 
 		try {
 			$statements = $this->parser->parse($code);
-			$statements = $traverser->traverse($statements);
+			$traverser->traverse($statements);
 		} catch (Error $e) {
-			echo 'Parse Error: ', $e->getMessage();
-			return;
+			throw new RuntimeException('Parse Error: ', $e->getMessage());
 		}
 
 		$dependencies = $registry->getEntries();
