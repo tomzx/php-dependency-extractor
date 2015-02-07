@@ -3,6 +3,7 @@
 namespace PHPDependencyExtractor\Console;
 
 use PHPDependencyExtractor\Console\Command\ExtractCommand;
+use PHPDependencyExtractor\Console\Command\SelfUpdateCommand;
 use Symfony\Component\Console\Application as SymfonyApplication;
 
 class Application extends SymfonyApplication {
@@ -31,6 +32,7 @@ class Application extends SymfonyApplication {
 	{
 		$commands = parent::getDefaultCommands();
 		$commands[] = $this->add(new ExtractCommand());
+		$commands[] = $this->add(new SelfUpdateCommand());
 		return $commands;
 	}
 }
