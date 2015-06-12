@@ -1,10 +1,12 @@
 #PHP Dependency Extractor
 
-[![Build Status](https://travis-ci.org/tomzx/php-dependency-extractor.svg)](https://travis-ci.org/tomzx/php-dependency-extractor)
-[![Total Downloads](https://poser.pugx.org/tomzx/php-dependency-extractor/downloads.svg)](https://packagist.org/packages/tomzx/php-dependency-extractor)
+[![License](https://poser.pugx.org/tomzx/php-dependency-extractor/license.svg)](https://packagist.org/packages/tomzx/php-dependency-extractor)
 [![Latest Stable Version](https://poser.pugx.org/tomzx/php-dependency-extractor/v/stable.svg)](https://packagist.org/packages/tomzx/php-dependency-extractor)
 [![Latest Unstable Version](https://poser.pugx.org/tomzx/php-dependency-extractor/v/unstable.svg)](https://packagist.org/packages/tomzx/php-dependency-extractor)
-[![License](https://poser.pugx.org/tomzx/php-dependency-extractor/license.svg)](https://packagist.org/packages/tomzx/php-dependency-extractor)
+[![Build Status](https://img.shields.io/travis/tomzx/php-dependency-extractor.svg)](https://travis-ci.org/tomzx/php-dependency-extractor)
+[![Code Quality](https://img.shields.io/scrutinizer/g/tomzx/php-dependency-extractor.svg)](https://scrutinizer-ci.com/g/tomzx/php-dependency-extractor/code-structure)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/tomzx/php-dependency-extractor.svg)](https://scrutinizer-ci.com/g/tomzx/php-dependency-extractor)
+[![Total Downloads](https://img.shields.io/packagist/dt/tomzx/php-dependency-extractor.svg)](https://packagist.org/packages/tomzx/php-dependency-extractor)
 
 `PHP Dependency Extractor` is a command line tool that will parse a directory of PHP source code to extract dependencies.
 
@@ -53,4 +55,4 @@ Symfony\Component\Console\Output\OutputInterface
 
 ## License
 
-The code is licensed under the [MIT license](http://choosealicense.com/licenses/mit/). See LICENSE.
+The code is licensed under the [MIT license](http://choosealicense.com/licenses/mit/). See [LICENSE](LICENSE).
